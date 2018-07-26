@@ -16,6 +16,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D80A2562210956540082A9C0 /* body_blank_figure_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_blank_figure_front.png; sourceTree = "<group>"; };
+		D80A2563210956550082A9C0 /* body_icon04_i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon04_i.png; sourceTree = "<group>"; };
+		D80A2564210956550082A9C0 /* tsume_foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tsume_foot.png; sourceTree = "<group>"; };
+		D80A2565210956550082A9C0 /* body_icon01_nou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon01_nou.png; sourceTree = "<group>"; };
+		D80A2566210956550082A9C0 /* body_icon06_kanzou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon06_kanzou.png; sourceTree = "<group>"; };
+		D80A2567210956560082A9C0 /* body_icon03_shinzou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon03_shinzou.png; sourceTree = "<group>"; };
+		D80A2568210956560082A9C0 /* body_kata_kansetsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_kata_kansetsu.png; sourceTree = "<group>"; };
+		D80A2569210956560082A9C0 /* body_icon08_syouchou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon08_syouchou.png; sourceTree = "<group>"; };
+		D80A256A210956570082A9C0 /* body_icon02_hai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon02_hai.png; sourceTree = "<group>"; };
+		D80A256B210956570082A9C0 /* body_icon12_boukou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon12_boukou.png; sourceTree = "<group>"; };
+		D80A256C210956570082A9C0 /* body_me_juketsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_me_juketsu.png; sourceTree = "<group>"; };
+		D80A256D210956580082A9C0 /* body_icon09_jinzou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon09_jinzou.png; sourceTree = "<group>"; };
+		D80A256E210956580082A9C0 /* body_mouth_hentousen_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_mouth_hentousen_no.png; sourceTree = "<group>"; };
+		D80A256F210956590082A9C0 /* tsume_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tsume_hand.png; sourceTree = "<group>"; };
+		D80A2570210956590082A9C0 /* body_icon10_hizou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon10_hizou.png; sourceTree = "<group>"; };
+		D80A2571210956590082A9C0 /* body_shinzou_danmenzu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_shinzou_danmenzu.png; sourceTree = "<group>"; };
+		D80A25722109565A0082A9C0 /* body_icon07_daichou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon07_daichou.png; sourceTree = "<group>"; };
 		D861F86E21074E890007F507 /* LLO_V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLO_V1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D861F87121074E890007F507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D861F87321074E890007F507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +54,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80A253F210955A30082A9C0 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				D80A2562210956540082A9C0 /* body_blank_figure_front.png */,
+				D80A2565210956550082A9C0 /* body_icon01_nou.png */,
+				D80A256A210956570082A9C0 /* body_icon02_hai.png */,
+				D80A2567210956560082A9C0 /* body_icon03_shinzou.png */,
+				D80A2563210956550082A9C0 /* body_icon04_i.png */,
+				D80A2566210956550082A9C0 /* body_icon06_kanzou.png */,
+				D80A25722109565A0082A9C0 /* body_icon07_daichou.png */,
+				D80A2569210956560082A9C0 /* body_icon08_syouchou.png */,
+				D80A256D210956580082A9C0 /* body_icon09_jinzou.png */,
+				D80A2570210956590082A9C0 /* body_icon10_hizou.png */,
+				D80A256B210956570082A9C0 /* body_icon12_boukou.png */,
+				D80A2568210956560082A9C0 /* body_kata_kansetsu.png */,
+				D80A256C210956570082A9C0 /* body_me_juketsu.png */,
+				D80A256E210956580082A9C0 /* body_mouth_hentousen_no.png */,
+				D80A2571210956590082A9C0 /* body_shinzou_danmenzu.png */,
+				D80A2564210956550082A9C0 /* tsume_foot.png */,
+				D80A256F210956590082A9C0 /* tsume_hand.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		D861F86521074E890007F507 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +97,7 @@
 		D861F87021074E890007F507 /* LLO_V1 */ = {
 			isa = PBXGroup;
 			children = (
+				D80A253F210955A30082A9C0 /* img */,
 				D861F87121074E890007F507 /* AppDelegate.swift */,
 				D861F87321074E890007F507 /* ViewController.swift */,
 				D861F87521074E890007F507 /* Main.storyboard */,

@@ -9,20 +9,21 @@
 import UIKit
 
 class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var weight: UIPickerView!
-    @IBOutlet weak var age: UIPickerView!
+    @IBOutlet weak var pickerAge: UIPickerView!   
+    @IBOutlet weak var pickerHeight: UIPickerView!
+    @IBOutlet weak var pickerWeight: UIPickerView!
+    
     var texts = ["1","2","3","4","5","6","7","8","9","0"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pickerの準備
-        picker.delegate = self
-        picker.dataSource = self
-        weight.delegate = self
-        weight.dataSource = self
-        age.delegate = self
-        age.dataSource = self
+        pickerAge.delegate = self
+        pickerAge.dataSource = self
+        pickerWeight.delegate = self
+        pickerWeight.dataSource = self
+        pickerHeight.delegate = self
+        pickerHeight.dataSource = self
     }
     
     //pickerの列の数
