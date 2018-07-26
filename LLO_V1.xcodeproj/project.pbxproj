@@ -12,6 +12,7 @@
 		D861F87721074E890007F507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D861F87521074E890007F507 /* Main.storyboard */; };
 		D861F87921074E8A0007F507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D861F87821074E8A0007F507 /* Assets.xcassets */; };
 		D861F87C21074E8A0007F507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D861F87A21074E8A0007F507 /* LaunchScreen.storyboard */; };
+		D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F883210758C10007F507 /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D861F87821074E8A0007F507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D861F87B21074E8A0007F507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D861F87D21074E8A0007F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D861F883210758C10007F507 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				D861F87121074E890007F507 /* AppDelegate.swift */,
 				D861F87321074E890007F507 /* ViewController.swift */,
 				D861F87521074E890007F507 /* Main.storyboard */,
+				D861F883210758C10007F507 /* PersonalInfoViewController.swift */,
 				D861F87821074E8A0007F507 /* Assets.xcassets */,
 				D861F87A21074E8A0007F507 /* LaunchScreen.storyboard */,
 				D861F87D21074E8A0007F507 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D861F87421074E890007F507 /* ViewController.swift in Sources */,
+				D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */,
 				D861F87221074E890007F507 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
