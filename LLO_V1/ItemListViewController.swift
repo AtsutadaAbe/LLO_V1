@@ -13,12 +13,13 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     var items = [Item]()
     var item:Item?
     var currentString = ""
+    @IBOutlet weak var tableView: UITableView!
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row].title
         print("cell" + indexPath.row.description)
@@ -28,13 +29,14 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
         startDownload()
     }
     
     func startDownload(){
         print("スタートダウンロード開始")
         self.items = []
-        if let url = URL( string: "https://www.apple.com/jp/newsroom/rss-feed.rss"){
+        if let url = URL( string: "https://www.books.rakuten.co.jp/ranking/hourly/001/rss"){
             if let parser = XMLParser(contentsOf: url) {
                 self.parser = parser
                 self.parser.delegate = self
@@ -47,7 +49,7 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     func parser(_ parser:XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes atributeDict: [String : String]){
         
         self.currentString = ""
-        if elementName == "entry" {
+        if elementName == "item" {
             self.item = Item()
         }
     }
@@ -57,11 +59,12 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser,didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
-        
+        print("parser :"+elementName)
         switch elementName {
         case "title": self.item?.title = currentString
-        case "id": self.item?.link = currentString
-        case "entry": self.items.append(self.item!)
+        case "link": self.item?.link = currentString
+        case "item": self.items.append(self.item!)
+            print("item OK")
         default : break
         }
     }
@@ -69,12 +72,12 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     func parserDidEndDocument(_ parser: XMLParser){
         self.tableView.reloadData()
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//        if let indexPath = self.tableView.indexPathForSelectedRow {
-//            let item = items[indexPath.row]
-//            let controller = segue.destination as! DetailViewController
-//            controller.title = item.title
-//            controller.link = item.link
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let item = items[indexPath.row]
+            let controller = segue.destination as! ItemViewController
+            controller.title = item.title
+            
+        }
+    }
 }
