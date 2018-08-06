@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ItemListViewController: UITableViewController, XMLParserDelegate {
+class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewDataSource,XMLParserDelegate {
     var parser: XMLParser!
     var items = [Item]()
     var item:Item?
     var currentString = ""
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +75,7 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let item = items[indexPath.row]
+            //let items = items[indexPath.row]
             //let controller = segue.destination as! ItemViewController
             //controller.title = item.title
             
