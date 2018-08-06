@@ -36,7 +36,7 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     func startDownload(){
         print("スタートダウンロード開始")
         self.items = []
-        if let url = URL( string: "https://www.books.rakuten.co.jp/ranking/hourly/001/rss"){
+        if let url = URL( string: "https://books.rakuten.co.jp/ranking/hourly/001/rss"){
             if let parser = XMLParser(contentsOf: url) {
                 self.parser = parser
                 self.parser.delegate = self
@@ -75,8 +75,8 @@ class ItemListViewController: UITableViewController, XMLParserDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let item = items[indexPath.row]
-            let controller = segue.destination as! ItemViewController
-            controller.title = item.title
+            //let controller = segue.destination as! ItemViewController
+            //controller.title = item.title
             
         }
     }
