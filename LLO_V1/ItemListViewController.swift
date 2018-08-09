@@ -75,9 +75,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            //let items = items[indexPath.row]
-            //let controller = segue.destination as! ItemViewController
-            //controller.title = item.title
+            let item = items[indexPath.row]
+            let controller = segue.destination as! ItemViewController
+            controller.title = item.title
+            controller.itemName = item.title
             
         }
     }

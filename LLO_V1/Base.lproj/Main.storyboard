@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Agreement View Controller-->
         <scene sceneID="1Vl-NT-iKR">
             <objects>
-                <viewController id="Eeb-4E-X43" sceneMemberID="viewController">
+                <viewController id="Eeb-4E-X43" customClass="AgreementViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1GM-dq-SyY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,13 +67,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-fC-fnb">
-                                <rect key="frame" x="156" y="464" width="62" height="30"/>
+                                <rect key="frame" x="104" y="463" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="同意する"/>
                                 <connections>
                                     <segue destination="ljD-q5-faB" kind="show" id="NfV-0Q-ebr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-8B-kPe">
+                                <rect key="frame" x="193" y="463" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="同意しない"/>
+                                <connections>
+                                    <action selector="notAgree:" destination="Eeb-4E-X43" eventType="touchUpInside" id="2F2-hH-jsd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="58A-My-Qir">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="n0D-T3-o8d"/>
@@ -243,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="3349.5999999999999" y="114.69265367316342"/>
         </scene>
-        <!--View Controller-->
+        <!--Lifestyle View Controller-->
         <scene sceneID="yET-O1-pY2">
             <objects>
-                <viewController id="bRp-tT-2HR" sceneMemberID="viewController">
+                <viewController id="bRp-tT-2HR" customClass="LifestyleViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2NP-pb-FRO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,6 +307,9 @@
                                 <rect key="frame" x="284" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="registLifestyle:" destination="bRp-tT-2HR" eventType="touchUpInside" id="oNs-9F-ZoN"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oYy-J3-DBA">
                                 <rect key="frame" x="42" y="128" width="186" height="30"/>
@@ -370,6 +389,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="J11-jE-4zw" kind="show" id="1FR-nj-m4N"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -389,45 +411,32 @@
             </objects>
             <point key="canvasLocation" x="1836" y="926.98650674662679"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Sm2-CV-5ET">
-            <objects>
-                <viewController id="CHQ-x5-we2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3hX-sP-91a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiC-kH-FNN">
-                                <rect key="frame" x="210" y="604" width="149" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="お勧めの商品"/>
-                                <connections>
-                                    <segue destination="J11-jE-4zw" kind="show" id="s5h-Ot-xox"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Btx-el-ZDx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zOb-JJ-pUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1056.8" y="1673.6131934032985"/>
-        </scene>
-        <!--View Controller-->
+        <!--Item View Controller-->
         <scene sceneID="gle-9Q-M6w">
             <objects>
-                <viewController id="J11-jE-4zw" sceneMemberID="viewController">
+                <viewController id="J11-jE-4zw" customClass="ItemViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9i-nA-DAb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAj-Zs-8k8">
+                                <rect key="frame" x="54" y="86" width="260" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IEy-nV-3H6"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="HAj-Zs-8k8" id="Ffl-H6-jq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ln-fV-tNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="2432"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="926.98650674662679"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e4C-jq-WyL">
