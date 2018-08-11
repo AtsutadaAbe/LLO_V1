@@ -18,6 +18,9 @@
 		D861F87C21074E8A0007F507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D861F87A21074E8A0007F507 /* LaunchScreen.storyboard */; };
 		D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F883210758C10007F507 /* PersonalInfoViewController.swift */; };
 		D8BF4295211BCBA00054CC13 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF4294211BCBA00054CC13 /* ItemViewController.swift */; };
+		D8DA5422211C308D00FB2B7C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5421211C308D00FB2B7C /* StartViewController.swift */; };
+		D8DA5424211F235600FB2B7C /* HealthConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */; };
+		D8DA5426211F997000FB2B7C /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5425211F997000FB2B7C /* BodyViewController.swift */; };
 		D8DDF18B211BD92F000A24F4 /* LifestyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		D861F87D21074E8A0007F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D861F883210758C10007F507 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		D8BF4294211BCBA00054CC13 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		D8DA5421211C308D00FB2B7C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConditionsViewController.swift; sourceTree = "<group>"; };
+		D8DA5425211F997000FB2B7C /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +118,10 @@
 				D80A253F210955A30082A9C0 /* img */,
 				D861F87121074E890007F507 /* AppDelegate.swift */,
 				D861F87321074E890007F507 /* ViewController.swift */,
+				D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */,
 				D861F87521074E890007F507 /* Main.storyboard */,
+				D8DA5425211F997000FB2B7C /* BodyViewController.swift */,
+				D8DA5421211C308D00FB2B7C /* StartViewController.swift */,
 				D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */,
 				D817A093211BD51100DF0BF9 /* AgreementViewController.swift */,
 				D861F883210758C10007F507 /* PersonalInfoViewController.swift */,
@@ -201,7 +210,10 @@
 				D8066B29210FF0840008D76B /* Item.swift in Sources */,
 				D861F87421074E890007F507 /* ViewController.swift in Sources */,
 				D8066B27210FEF990008D76B /* ItemListViewController.swift in Sources */,
+				D8DA5424211F235600FB2B7C /* HealthConditionsViewController.swift in Sources */,
 				D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */,
+				D8DA5422211C308D00FB2B7C /* StartViewController.swift in Sources */,
+				D8DA5426211F997000FB2B7C /* BodyViewController.swift in Sources */,
 				D861F87221074E890007F507 /* AppDelegate.swift in Sources */,
 				D817A094211BD51100DF0BF9 /* AgreementViewController.swift in Sources */,
 				D8BF4295211BCBA00054CC13 /* ItemViewController.swift in Sources */,
