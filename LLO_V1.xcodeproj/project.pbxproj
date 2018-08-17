@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8030DA02124FA6500FA6870 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8030D9F2124FA6500FA6870 /* SettingViewController.swift */; };
+		D8030DA22125045000FA6870 /* InputValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8030DA12125045000FA6870 /* InputValueViewController.swift */; };
 		D8066B27210FEF990008D76B /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066B26210FEF990008D76B /* ItemListViewController.swift */; };
 		D8066B29210FF0840008D76B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066B28210FF0840008D76B /* Item.swift */; };
 		D80A25732109FCF80082A9C0 /* body_blank_figure_front.png in Resources */ = {isa = PBXBuildFile; fileRef = D80A2562210956540082A9C0 /* body_blank_figure_front.png */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8030D9F2124FA6500FA6870 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D8030DA12125045000FA6870 /* InputValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValueViewController.swift; sourceTree = "<group>"; };
 		D8066B26210FEF990008D76B /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		D8066B28210FF0840008D76B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D80A2562210956540082A9C0 /* body_blank_figure_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_blank_figure_front.png; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				D861F87321074E890007F507 /* ViewController.swift */,
 				D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */,
 				D861F87521074E890007F507 /* Main.storyboard */,
+				D8030DA12125045000FA6870 /* InputValueViewController.swift */,
+				D8030D9F2124FA6500FA6870 /* SettingViewController.swift */,
 				D8DA5425211F997000FB2B7C /* BodyViewController.swift */,
 				D8DA5421211C308D00FB2B7C /* StartViewController.swift */,
 				D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */,
@@ -216,7 +222,9 @@
 				D8DA5426211F997000FB2B7C /* BodyViewController.swift in Sources */,
 				D861F87221074E890007F507 /* AppDelegate.swift in Sources */,
 				D817A094211BD51100DF0BF9 /* AgreementViewController.swift in Sources */,
+				D8030DA22125045000FA6870 /* InputValueViewController.swift in Sources */,
 				D8BF4295211BCBA00054CC13 /* ItemViewController.swift in Sources */,
+				D8030DA02124FA6500FA6870 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
