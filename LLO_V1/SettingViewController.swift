@@ -17,8 +17,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     let continent = ["血中濃度", "肝機能","腎臓","糖尿病","目","熟睡度","美肌"]
     // セクション内の項目
     let items1 = ["HDLコレステロール","LDLコレステロール","中性脂肪"]
-    let items2 = ["AST","ALT","r-GTP","お酒を飲む回数"]
-    let items3 = ["クレアチン（男性）","クレアチン（女性）","eGFR","蛋白"]
+    let items2 = ["AST","ALT","γ-GT（γ-GTP）","お酒を飲む回数"]
+    let items3 = ["クレアチニン（男性）","クレアチニン（女性）","eGFR","蛋白"]
     let items4 = ["空腹時血糖","HbA1c","お酒を飲む回数","脂っぽいものが好き"]
     let items5 = ["近くのものを見る時、ピントがあいにくい","パソコンや新聞などで目を酷使している","小さな文字をストレスに感じるようになった","目の使い過ぎで肩・首筋が凝っている"]
     let items6 = ["毎日スッキリ目覚められる","睡眠時間が短いと感じている","日中の集中力が低下していると感じる"]

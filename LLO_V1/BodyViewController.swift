@@ -19,6 +19,12 @@ class BodyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("画面遷移先：" + segue.destination.description)
+        let secondViewController:ItemListViewController = segue.destination as! ItemListViewController
+        // 遷移先のViewControllerに対してsegueの名称を渡す
+        secondViewController.sendText = segue.identifier!.description
+        
+    }
     
 }

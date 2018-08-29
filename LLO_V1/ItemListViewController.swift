@@ -14,6 +14,10 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
     var item:Item?
     var currentString = ""
     
+    @IBOutlet weak var image: UIImageView!
+    // ここで受け取る
+    var sendText:String = ""
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,8 +34,18 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        print("商品一覧表示："+sendText)
+        //部位に対応したイメージ画像を表示する
+        if (sendText == "SegueHead") {
+            image.image = UIImage(named:"body_icon01_nou.png")
+        }else if(sendText == "SegueStomach"){
+            image.image = UIImage(named:"body_icon04_i.png")
+        }else if(sendText == "SegueLeg"){
+            image.image = UIImage(named:"tsume_foot.png")
+        }
         
         startDownload()
+        
     }
     
     func startDownload(){

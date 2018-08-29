@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80118AF2134F0BF00214A27 /* body_icon04_i.png in Resources */ = {isa = PBXBuildFile; fileRef = D80A2563210956550082A9C0 /* body_icon04_i.png */; };
+		D80118B02134F11300214A27 /* tsume_foot.png in Resources */ = {isa = PBXBuildFile; fileRef = D80A2564210956550082A9C0 /* tsume_foot.png */; };
+		D80118B12134F11700214A27 /* body_icon01_nou.png in Resources */ = {isa = PBXBuildFile; fileRef = D80A2565210956550082A9C0 /* body_icon01_nou.png */; };
 		D8030DA02124FA6500FA6870 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8030D9F2124FA6500FA6870 /* SettingViewController.swift */; };
 		D8030DA22125045000FA6870 /* InputValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8030DA12125045000FA6870 /* InputValueViewController.swift */; };
 		D8066B27210FEF990008D76B /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8066B26210FEF990008D76B /* ItemListViewController.swift */; };
@@ -21,9 +24,7 @@
 		D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F883210758C10007F507 /* PersonalInfoViewController.swift */; };
 		D8BF4295211BCBA00054CC13 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF4294211BCBA00054CC13 /* ItemViewController.swift */; };
 		D8DA5422211C308D00FB2B7C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5421211C308D00FB2B7C /* StartViewController.swift */; };
-		D8DA5424211F235600FB2B7C /* HealthConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */; };
 		D8DA5426211F997000FB2B7C /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA5425211F997000FB2B7C /* BodyViewController.swift */; };
-		D8DDF18B211BD92F000A24F4 /* LifestyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +60,7 @@
 		D861F883210758C10007F507 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		D8BF4294211BCBA00054CC13 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D8DA5421211C308D00FB2B7C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConditionsViewController.swift; sourceTree = "<group>"; };
 		D8DA5425211F997000FB2B7C /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
-		D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,13 +121,11 @@
 				D80A253F210955A30082A9C0 /* img */,
 				D861F87121074E890007F507 /* AppDelegate.swift */,
 				D861F87321074E890007F507 /* ViewController.swift */,
-				D8DA5423211F235600FB2B7C /* HealthConditionsViewController.swift */,
 				D861F87521074E890007F507 /* Main.storyboard */,
 				D8030DA12125045000FA6870 /* InputValueViewController.swift */,
 				D8030D9F2124FA6500FA6870 /* SettingViewController.swift */,
 				D8DA5425211F997000FB2B7C /* BodyViewController.swift */,
 				D8DA5421211C308D00FB2B7C /* StartViewController.swift */,
-				D8DDF18A211BD92F000A24F4 /* LifestyleViewController.swift */,
 				D817A093211BD51100DF0BF9 /* AgreementViewController.swift */,
 				D861F883210758C10007F507 /* PersonalInfoViewController.swift */,
 				D861F87821074E8A0007F507 /* Assets.xcassets */,
@@ -198,10 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80118B02134F11300214A27 /* tsume_foot.png in Resources */,
+				D80118AF2134F0BF00214A27 /* body_icon04_i.png in Resources */,
 				D80A25732109FCF80082A9C0 /* body_blank_figure_front.png in Resources */,
 				D861F87C21074E8A0007F507 /* LaunchScreen.storyboard in Resources */,
 				D861F87921074E8A0007F507 /* Assets.xcassets in Resources */,
 				D861F87721074E890007F507 /* Main.storyboard in Resources */,
+				D80118B12134F11700214A27 /* body_icon01_nou.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,11 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8DDF18B211BD92F000A24F4 /* LifestyleViewController.swift in Sources */,
 				D8066B29210FF0840008D76B /* Item.swift in Sources */,
 				D861F87421074E890007F507 /* ViewController.swift in Sources */,
 				D8066B27210FEF990008D76B /* ItemListViewController.swift in Sources */,
-				D8DA5424211F235600FB2B7C /* HealthConditionsViewController.swift in Sources */,
 				D861F884210758C10007F507 /* PersonalInfoViewController.swift in Sources */,
 				D8DA5422211C308D00FB2B7C /* StartViewController.swift in Sources */,
 				D8DA5426211F997000FB2B7C /* BodyViewController.swift in Sources */,
