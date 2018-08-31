@@ -8,6 +8,10 @@
 
 import UIKit
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // 設定データ保持オブジェクト
+    static var datas: Dictionary<String, ValueData> = [:]
+    
     @IBAction func save(_ sender: UIBarButtonItem) {
         //更新ボタンが押された時
         self.navigationController!.popToRootViewController(animated: true)
@@ -21,7 +25,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     let items3 = ["クレアチニン（男性）","クレアチニン（女性）","eGFR","蛋白"]
     let items4 = ["空腹時血糖","HbA1c","お酒を飲む回数","脂っぽいものが好き"]
     let items5 = ["近くのものを見る時、ピントがあいにくい","パソコンや新聞などで目を酷使している","小さな文字をストレスに感じるようになった","目の使い過ぎで肩・首筋が凝っている"]
-    let items6 = ["毎日スッキリ目覚められる","睡眠時間が短いと感じている","日中の集中力が低下していると感じる"]
+    let items6 = ["毎日スッキリ目覚められる","睡眠時間が十分にとれている","日中集中して物事に取り組める"]
     let items7 = ["お米、パスタ、パンなど炭水化物を食事で取りすぎている傾向にある","汗をかいてそのまま放置することが多い","睡眠時間が短いと感じている","便秘がちである","食事の回数や時間が日によってバラバラである"]
     
     override func viewDidLoad() {
@@ -108,41 +112,137 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
+        //設定データオブジェクト用意
+        let data = ValueData()
+        
         //設定項目行が押された時
         if let indexPath = self.tableView.indexPathForSelectedRow {
             if indexPath.section == 0 {
                 let item = items1[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
+                
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
+                
+                
             } else if indexPath.section == 1 {
                 let item = items2[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
+                
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
                 
             } else if indexPath.section == 2 {
                 let item = items3[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
                 
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
+                
             } else if indexPath.section == 3 {
                 let item = items4[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
+                
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
                 
             } else if indexPath.section == 4 {
                 let item = items5[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
                 
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
+                
             } else if indexPath.section == 5 {
                 let item = items6[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
                 
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
+                
             } else if indexPath.section == 6 {
                 let item = items7[indexPath.row]
                 let controller = segue.destination as! InputValueViewController
                 controller.itemName = item
+                
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
+
                 
             }
             

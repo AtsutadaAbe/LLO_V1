@@ -177,6 +177,7 @@ Mail:info@example.co.jp
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登録"/>
                                 <connections>
+                                    <action selector="next:" destination="ljD-q5-faB" eventType="touchUpInside" id="ED1-AW-Nsa"/>
                                     <segue destination="9MI-hT-f0x" kind="show" id="azg-PB-z5H"/>
                                 </connections>
                             </button>
@@ -273,7 +274,7 @@ Mail:info@example.co.jp
                                 <rect key="frame" x="35" y="293" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="slider:" destination="pfZ-11-CZ8" eventType="valueChanged" id="Jqn-nj-COw"/>
+                                    <action selector="inputSlider:" destination="pfZ-11-CZ8" eventType="valueChanged" id="Zx2-Lh-Xym"/>
                                 </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-xb-5PZ">
@@ -283,6 +284,9 @@ Mail:info@example.co.jp
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="inputRadio:" destination="pfZ-11-CZ8" eventType="valueChanged" id="ygT-45-lU6"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8V-0M-gcw">
                                 <rect key="frame" x="37" y="184" width="300" height="21"/>
@@ -333,26 +337,9 @@ Mail:info@example.co.jp
                             <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body_blank_figure_front.png" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-ff-iRh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-U8-EOZ">
-                                <rect key="frame" x="160" y="531" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1021661386" blue="0.085970708600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4x8-DB-ek2"/>
-                                </constraints>
-                                <state key="normal" title="足"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueLeg" id="It0-Zz-XTC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hq-Hh-1dG">
                                 <rect key="frame" x="162" y="351" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.10216613859182766" blue="0.085970708604182766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qd6-m3-5RW"/>
                                 </constraints>
@@ -369,7 +356,7 @@ Mail:info@example.co.jp
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-GQ-gR7">
                                 <rect key="frame" x="160" y="135" width="50" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1021661386" blue="0.085970708600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LPr-t5-3Ph"/>
                                 </constraints>
@@ -382,6 +369,23 @@ Mail:info@example.co.jp
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueHead" id="HIR-qt-gK4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-U8-EOZ">
+                                <rect key="frame" x="160" y="531" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4x8-DB-ek2"/>
+                                </constraints>
+                                <state key="normal" title="足"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueLeg" id="It0-Zz-XTC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -403,6 +407,11 @@ Mail:info@example.co.jp
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wrc-id-5g3"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonHead" destination="FEv-GQ-gR7" id="SiQ-9d-7qN"/>
+                        <outlet property="buttonLeg" destination="PEX-U8-EOZ" id="x9o-Dx-bmY"/>
+                        <outlet property="buttonStomach" destination="6Hq-Hh-1dG" id="ycb-qv-YD1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmb-6U-Wco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

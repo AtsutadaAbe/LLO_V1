@@ -12,23 +12,44 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
     @IBOutlet weak var pickerAge: UIPickerView!   
     @IBOutlet weak var pickerHeight: UIPickerView!
     @IBOutlet weak var pickerWeight: UIPickerView!
+    @IBAction func next(_ sender: UIButton) {
+        let age = 10 * pickerAge.selectedRow(inComponent: 0) + pickerAge.selectedRow(inComponent: 1)
+        let data = ValueData()
+        data.inputVal = age
+        SettingViewController.datas["age"] = data
+    }
     
-    var texts = ["1","2","3","4","5","6","7","8","9","0"]
+    var texts = ["0","1","2","3","4","5","6","7","8","9"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pickerの準備
+        pickerAge.tag = 1
         pickerAge.delegate = self
         pickerAge.dataSource = self
-        pickerWeight.delegate = self
-        pickerWeight.dataSource = self
+        pickerHeight.tag = 2
         pickerHeight.delegate = self
         pickerHeight.dataSource = self
+        pickerWeight.tag = 3
+        pickerWeight.delegate = self
+        pickerWeight.dataSource = self
+        
+        //年齢を表示
+        if (SettingViewController.datas["age"] != nil) {
+            let ageData = SettingViewController.datas["age"]
+            pickerAge.selectRow((ageData!.inputVal / 10) , inComponent: 0, animated: true)
+            pickerAge.selectRow(ageData!.inputVal % 10 , inComponent: 1, animated: true)
+        }
     }
     
     //pickerの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        var num = 3
+        if (pickerView.tag == 1) {
+            //年齢の時は2桁
+            num = 2
+        }
+        return num
     }
     
     // pickerに表示する値の数
