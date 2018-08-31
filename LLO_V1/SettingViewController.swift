@@ -18,7 +18,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     @IBOutlet weak var tableView: UITableView!
     // セクション
-    let continent = ["血中濃度", "肝機能","腎臓","糖尿病","目","熟睡度","美肌"]
+    let continent = ["血中濃度", "肝機能","腎臓","糖尿病","目","熟睡度","美肌","膝"]
     // セクション内の項目
     let items1 = ["HDLコレステロール","LDLコレステロール","中性脂肪"]
     let items2 = ["AST","ALT","γ-GT（γ-GTP）","お酒を飲む回数"]
@@ -27,6 +27,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     let items5 = ["近くのものを見る時、ピントがあいにくい","パソコンや新聞などで目を酷使している","小さな文字をストレスに感じるようになった","目の使い過ぎで肩・首筋が凝っている"]
     let items6 = ["毎日スッキリ目覚められる","睡眠時間が十分にとれている","日中集中して物事に取り組める"]
     let items7 = ["お米、パスタ、パンなど炭水化物を食事で取りすぎている傾向にある","汗をかいてそのまま放置することが多い","睡眠時間が短いと感じている","便秘がちである","食事の回数や時間が日によってバラバラである"]
+    let items8 = ["歩いたり階段を登る際、スムーズに移動できる"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         }else if section == 6{
             return items7.count
+            
+        }else if section == 7{
+            return items8.count
         
         } else {
             return 0
@@ -100,6 +104,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         } else if indexPath.section == 6{
             cell.textLabel!.text = items7[indexPath.row]
+            
+        } else if indexPath.section == 7{
+            cell.textLabel!.text = items8[indexPath.row]
         
         }
         return cell
@@ -243,6 +250,22 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                     SettingViewController.datas[item] = data
                 }
 
+            }else if indexPath.section == 7 {
+                let item = items8[indexPath.row]
+                let controller = segue.destination as! InputValueViewController
+                controller.itemName = item
+                
+                //設定データオブジェクトDictionaryから名称に対応するオブジェクトがあるかどうか確認
+                if (SettingViewController.datas[item] != nil) {
+                    //存在するとき入力画面Viewに渡す
+                    controller.data = SettingViewController.datas[item]
+                    
+                }else{
+                    //存在しないとき空の設定データオブジェクトを入れる
+                    controller.data = data
+                    //設定データオブジェクト新規に入れる
+                    SettingViewController.datas[item] = data
+                }
                 
             }
             

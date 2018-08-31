@@ -27,6 +27,7 @@ class BodyViewController: UIViewController {
         
         var redStomach = false
         var redHead = false
+        var redLeg = false
         for d in SettingViewController.datas {
             //肝機能
             if ((d.key == "AST" && d.value.inputVal >= 31)
@@ -42,6 +43,10 @@ class BodyViewController: UIViewController {
                 || (d.key == "日中集中して物事に取り組める" && d.value.inputVal == 1){
                 redHead = true
             }
+            //足
+            if(d.key == "歩いたり階段を登る際、スムーズに移動できる" && d.value.inputVal == 1){
+                redLeg = true
+            }
             
             
         }
@@ -52,6 +57,10 @@ class BodyViewController: UIViewController {
         //頭の色付け
         if(redHead == true){
             buttonHead.backgroundColor = UIColor.red
+        }
+        //足の色付け
+        if(redLeg == true){
+            buttonLeg.backgroundColor = UIColor.red
         }
         
         
