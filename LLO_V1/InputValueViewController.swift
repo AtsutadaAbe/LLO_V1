@@ -29,6 +29,7 @@ class InputValueViewController: UIViewController {
         val.text = value.description
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = itemName
@@ -157,6 +158,17 @@ class InputValueViewController: UIViewController {
             self.radio.insertSegment(withTitle: "はい", at: 0, animated: true)
             self.radio.insertSegment(withTitle: "いいえ", at: 1, animated: true)
             
+            //ラベルのサイズを枠に合わせて自動でリサイズ
+            //self.label.adjustsFontSizeToFitWidth = true
+            
+            //表示可能最大行数を指定
+            self.label.numberOfLines = 0
+            //contentsのサイズに合わせてobujectのサイズを変える
+            self.label.sizeToFit()
+            self.label.text = "お米、パスタ、パンなど炭水化物を\n食事で取りすぎている傾向にある"
+            //単語の途中で改行されないようにする
+            //self.label.lineBreakMode = NSLineBreakByWordWrapping
+            
             //選択されている項目を復元
             self.radio.selectedSegmentIndex = data.inputVal
 
@@ -213,7 +225,7 @@ class InputValueViewController: UIViewController {
             self.radio.insertSegment(withTitle: "±", at: 1, animated: true)
             self.radio.insertSegment(withTitle: "-", at: 2, animated: true)
             
-            self.explain.text = "sdfgh"
+            self.explain.text = "蛋白は栄養分など各種物質を運搬したり、病原体に抵抗する抗体を作ったり、代謝や体の働きのバランスを保つなど多くの役割を果たしています。\n\n腎臓に障害があると、タンパク質は尿細管で再吸収されずに、尿中に漏れ出してしまいます。\nまた、尿管や暴行などに異常があって出血したりする場合でも、血液中のタンパク質に尿が混じってしまいます。\nこうしたことから、蛋白の検査は腎臓や尿管などの障害の有無を調べるために用いられます"
             
             //選択されている項目を復元
             self.radio.selectedSegmentIndex = data.inputVal
@@ -262,7 +274,7 @@ class InputValueViewController: UIViewController {
             self.slider.minimumValue = 10
             //スライダー値のラベル表示
             val.text = data.inputVal.description
-            self.explain.text = "dfghjk"
+            self.explain.text = "ASTはALTとともに様々な臓器細菌の中にあり、人体の重要な構成要素であるアミノ酸を作る働きをしています。\n血液中にも常に一定量が出ていますが、臓器や組織が損傷するとその分量が増加します。\nASTは心筋、肝臓、骨格筋、腎臓などに多く存在するため、肝臓障害、心筋梗塞、溶血などの診断に有効な検査となっています。\nASTを改善するためには、アルコールの摂取量を減らす、カロリーの高いものや脂肪分の多いものの摂取を控える、毎日適度な運動をする、といった生活習慣を見直す必要があります。\n上記のような生活習慣を見直すことに加えてお勧めな方法がある肝臓の働きをサポートする成分（タウリン・オルニチン・アルギニン・セサミン・サポニン）を摂取するという方法があります。"
         }
         else if(itemName == "ALT"){
             self.radio.isHidden = true
@@ -271,7 +283,7 @@ class InputValueViewController: UIViewController {
             self.slider.minimumValue = 10
             //スライダー値のラベル表示
             val.text = data.inputVal.description
-            self.explain.text = "dfghjk"
+            self.explain.text = "ALTはASTとともに様々な臓器細菌の中にあり、人体の重要な構成要素であるアミノ酸を作る働きをしています。\n血液中にも常に一定量が出ていますが、臓器や組織が損傷するとその分量が増加します。\nASTは特に肝細胞の変性や壊死に鋭敏に反応するので肝臓・胆道系の病気の診断に有効な検査となっています。\nALTを改善するためには、アルコールの摂取量を減らす、カロリーの高いものや脂肪分の多いものの摂取を控える、毎日適度な運動をする、といった生活習慣を見直す必要があります。\n上記のような生活習慣を見直すことに加えてお勧めな方法がある肝臓の働きをサポートする成分（タウリン・オルニチン・アルギニン・セサミン・サポニン）を摂取するという方法があります。"
         }
         else if(itemName == "γ-GT（γ-GTP）"){
             self.radio.isHidden = true
@@ -307,7 +319,7 @@ class InputValueViewController: UIViewController {
             self.slider.minimumValue = 30
             //スライダー値のラベル表示
             val.text = data.inputVal.description
-            self.explain.text = "dfghjk"
+            self.explain.text = "eGFRは腎臓にどれくらい老廃物を尿へ排泄する能力があるかを示していて、この値が低いほど腎臓の働きが悪いということになります。\neGFRが下がらないようにするには、不規則な生活をやめる、たばこやお酒をやめる、運動習慣をつけるという日常生活での習慣づけが必要です。\nまた、塩分の少ない食べ物や食物繊維を含む食べ物、L-シトルリンを含むを摂るようにすることもeGFRの低下を抑える効果が期待できます。"
         }
         else if(itemName == "空腹時血糖"){
             self.radio.isHidden = true

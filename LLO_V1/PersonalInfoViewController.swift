@@ -67,6 +67,7 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
         //label.text = texts[row]
         print(component.description + ":" + texts[row])
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
