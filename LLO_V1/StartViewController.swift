@@ -10,9 +10,21 @@ import UIKit
 
 class StartViewController: UIViewController {
     
+    @IBOutlet weak var comment: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+     var comment = arc4random_uniform(10)
+        if(comment == 1){
+            self.comment.text = "こんにちは"
+        }
+        else if(comment == 2){
+            self.comment.text = "こんばんは"
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
