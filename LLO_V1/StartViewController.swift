@@ -23,6 +23,9 @@ class StartViewController: UIViewController {
         else if(comment == 2){
             self.comment.text = "こんばんは"
         }
+        else if(comment == 3){
+            self.comment.text = "おはよう"
+        }
         
         
     }
