@@ -254,6 +254,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 250
             self.slider.minimumValue = 40
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "一般的に悪玉と言われているLDLコレステロール。LDLは細胞内に取り込まれなかった余剰なコレステロールを血管内に放置し、動脈硬化を引き起こす原因となります。\nLDLコレステロールや中性脂肪の数値が高い状態のまま放置していると動脈硬化を招き、狭心症や心筋梗塞、脳梗塞など重大な病気のリスクが高まります。\n\n食事は動物性脂肪の多い肉類は控えるようにして、代わりに不飽和脂肪酸（DHAやEPA）を豊富に含むイワシやサンマ、サバ、カツオ、マグロなどの青魚を積極的に食べるようにするといいです。\n野菜や海藻、きのこ類に含まれる食物繊維は血中コレステロールを低下させる作用があります。\n\nまた、動脈硬化を促進させる喫煙は控えた方が良いです。喫煙は悪玉のLDLコレステロールと中性脂肪を増加させ、HDLコレステロール（善玉）を減らすため、喫煙習慣のある人は動脈硬化のリスクが大きく上昇します。\n\nまた、適度な運動は血液の循環を良くして善玉コレステロールを増加させます。効果的な運動は、有酸素運動（ウォーキングや長距離の水泳など）を継続的に行う事です。"
@@ -263,6 +264,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 550
             self.slider.minimumValue = 20
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "中性脂肪は砂糖などの糖質（炭水化物）、動物性脂肪を主な原料として肝臓で作られます。\n食事でこれらを多く摂りすぎると、皮下脂肪の主成分として蓄積されます。血液中の中性脂肪やコレステロールが増えすぎる（脂質異常症）と、動脈硬化の危険が高まります。\n\n中性脂肪値が高値を示す人の大半は、肥満や食べ過ぎ、運動不足、飲酒によるものです。飲酒している人は禁酒するか、週2回程度に禁酒します。肥満や運動不足の人は、運動する習慣をつけ、脂肪や脂質（炭水化物）の多い食事を控えるなどといった努力で、大抵改善できます。\n\n食生活では、動物性脂肪が多い食品（牛や豚の脂身、ベーコン、ハム、ソーセージ、チーズ、バター、生クリーム）や糖質（炭水化物）を摂りすぎない事が大切です。\n中性脂肪を下げるために積極的に食べたいのが、アジ、イワシ、サバ、サンマ、マグロなどの青魚です。これら青魚の油には不飽和脂肪酸（EPAとDHA）が豊富に含まれています。このEPAとDHAには、肝臓での中性脂肪の合成を抑えて、血中の中性脂肪を減らす作用があります。\nその上、血液を固める働きのある血小板が凝集するのを防ぐため、心筋梗塞や脳梗塞の引き金となる血栓ができるのを予防してくれます。"
@@ -272,6 +274,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 70
             self.slider.minimumValue = 10
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "ASTはALTとともに様々な臓器細菌の中にあり、人体の重要な構成要素であるアミノ酸を作る働きをしています。\n血液中にも常に一定量が出ていますが、臓器や組織が損傷するとその分量が増加します。\nASTは心筋、肝臓、骨格筋、腎臓などに多く存在するため、肝臓障害、心筋梗塞、溶血などの診断に有効な検査となっています。\nASTを改善するためには、アルコールの摂取量を減らす、カロリーの高いものや脂肪分の多いものの摂取を控える、毎日適度な運動をする、といった生活習慣を見直す必要があります。\n上記のような生活習慣を見直すことに加えてお勧めな方法がある肝臓の働きをサポートする成分（タウリン・オルニチン・アルギニン・セサミン・サポニン）を摂取するという方法があります。"
@@ -281,6 +284,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 70
             self.slider.minimumValue = 10
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "ALTはASTとともに様々な臓器細菌の中にあり、人体の重要な構成要素であるアミノ酸を作る働きをしています。\n血液中にも常に一定量が出ていますが、臓器や組織が損傷するとその分量が増加します。\nASTは特に肝細胞の変性や壊死に鋭敏に反応するので肝臓・胆道系の病気の診断に有効な検査となっています。\nALTを改善するためには、アルコールの摂取量を減らす、カロリーの高いものや脂肪分の多いものの摂取を控える、毎日適度な運動をする、といった生活習慣を見直す必要があります。\n上記のような生活習慣を見直すことに加えてお勧めな方法がある肝臓の働きをサポートする成分（タウリン・オルニチン・アルギニン・セサミン・サポニン）を摂取するという方法があります。"
@@ -290,6 +294,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 150
             self.slider.minimumValue = 0
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "γ-GT（γ-GTP）はタンパク質を分解する酵素で、毒性のあるアルコールや薬剤などが肝細胞を破壊したり、結石やがんなどによって胆管がつまった時などに血液中に出てきます。\nγ-GT（γ-GTP）は肝臓や胆管に病気があるときは他の酵素より早期に反応を示すため、肝臓障害の鋭敏なマーカーとして用いられています。\nγ-GT（γ-GTP）はアルコールに敏感で、ほぼ毎日お酒を飲んでいる方では高い数値が出やすくなります。\n\nγ-GT（γ-GTP）の数値が高いからといって、すぐに肝臓や胆道の病気だと深刻に考える必要はありません。\n適切な検査を受けて、異常が認められれば医師の指示に従って治療を始めましょう。"
@@ -299,6 +304,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 2
             self.slider.minimumValue = 0
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "クレアチニンは尿酸や尿素窒素と同様に老廃物の一つで、腎臓が正常に働いていれば、尿として体外に排出されます。\n血液中のクレアチニンが多いということは、腎機能が障害されているということになります。\n\n異常があった場合日常生活では、塩分やタンパク質の摂取を制限する食事、適度な運動を心がけるとともに、肥満、高血圧、脱水などの憎悪因子を避けるようにしましょう。"
@@ -308,6 +314,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 2
             self.slider.minimumValue = 0
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "クレアチニンは尿酸や尿素窒素と同様に老廃物の一つで、腎臓が正常に働いていれば、尿として体外に排出されます。\n血液中のクレアチニンが多いということは、腎機能が障害されているということになります。\n\n異常があった場合日常生活では、塩分やタンパク質の摂取を制限する食事、適度な運動を心がけるとともに、肥満、高血圧、脱水などの憎悪因子を避けるようにしましょう。"
@@ -317,6 +324,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 70
             self.slider.minimumValue = 30
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "eGFRは腎臓にどれくらい老廃物を尿へ排泄する能力があるかを示していて、この値が低いほど腎臓の働きが悪いということになります。\neGFRが下がらないようにするには、不規則な生活をやめる、たばこやお酒をやめる、運動習慣をつけるという日常生活での習慣づけが必要です。\nまた、塩分の少ない食べ物や食物繊維を含む食べ物、L-シトルリンを含むを摂るようにすることもeGFRの低下を抑える効果が期待できます。"
@@ -326,6 +334,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 150
             self.slider.minimumValue = 50
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "血糖とは、一般的には血液中のブドウ糖のことを意味します。\nブドウ糖はエネルギー源として利用されているため、血液中のブドウ糖（血糖）は一定の濃度に保たれています。そのコントロールを行なっているインスリンが不足したり、あるいはインスリンの働きが弱くなったりすると、血液中に多量の糖が存在することになってしまいます。\n\n血糖を調整しているインスリンが不足すると、血液中にブドウ糖があるれて高血糖になり、逆に過剰になると低血糖になります。どちらの場合も、血糖の異常な増減は体に悪影響をもたらします。\n血糖の検査は、高血糖の疾患である糖尿病の有無、その治療や管理の指標として欠かせません。"
@@ -336,6 +345,7 @@ class InputValueViewController: UIViewController {
             //スライダーの最大と最小・設定値を復元
             self.slider.maximumValue = 8
             self.slider.minimumValue = 3
+            self.slider.value = Float(data.inputVal)
             //スライダー値のラベル表示
             val.text = data.inputVal.description
             self.explain.text = "HbA1cは糖化ヘモグロビンともいい、赤血球の中で体内に酸素を運ぶ役割のヘモグロビンと血液中のブドウ糖が結合したものです。\n血糖値や尿糖値が、検査前の食事や飲酒、検査時間によって変動するのに対し、HbA1cはそれらにほとんど影響を受けない特徴があるため、HbA1cの値を調べれば過去１〜２ヶ月の血糖の平均的な状況を知る事ができます。"

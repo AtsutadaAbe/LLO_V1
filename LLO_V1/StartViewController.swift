@@ -16,7 +16,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-     var comment = arc4random_uniform(10)
+     let comment = arc4random_uniform(10)
         if(comment == 1){
             self.comment.text = "こんにちは"
         }

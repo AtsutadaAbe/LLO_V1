@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import Foundation
 
 class ItemViewController: UIViewController {
     var itemName:String!
+    var itemPrice:Int!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         label.numberOfLines = 0;
+       
+//        //数字の３桁カンマ
+//        var formatter = NumberFormatter()
+//        formatter.numberStyle = .currency
+//        formatter.groupingSeparator = ","
+//        formatter.groupingSize = 3
+        
+        //商品名
         label.text = itemName
-        // Do any additional setup after loading the view, typically from a nib.
+        //商品価格
+        //labelPrice.text = formatter.stringFromNumber(Number(itemPrice)) + "円（税込）"
+        labelPrice.text = itemPrice.description + "円（税込）"
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,6 +11,9 @@ import Foundation
 class ValueData {
     // 設定値
     var inputVal:Int = 0
+    
+    var inputText:String = ""
+    
 }
 
 

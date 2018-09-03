@@ -9,9 +9,16 @@
 import Foundation
 
 class Item {
-    
+    //商品名
     var title = ""
-    
+    //商品詳細のリンク
     var link = ""
-    
+    //価格
+    var price = 0
+    init(title:String, link:String, price:Int) {
+        self.title = title
+        self.link = link
+        self.price = price
+    }
 }
+
