@@ -38,27 +38,40 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
         //商品一覧データを作る
         if(sendText == "SegueHead"){
             items = [
-                Item(title:"〈FAUCHON〉hhhhhhhhhh",link:"",price:2052),
-                Item(title:"〈日本サーナ〉ビルベリーとカシスの濃縮果汁セット",link:"",price:4140),
-                Item(title:"発酵カシス2本セット",link:"",price:4140),
-                Item(title:"〈Oaks Heart〉飲むブルーベリーの酢",link:"",price:1620),
-                //・・・・(続けてここに書いていく)・・・・
+                Item(title:"〈味の素〉グリナ（30本入り）",link:"",price:7128),
+                Item(title:"〈日本ガーリック株式会社〉グリシン200g（200g）",link:"",price:1680),
+                Item(title:"〈カレルチャペック紅茶〉ハーブティー（２缶セット）",link:"",price:2700),
+                Item(title:"〈西川寝具〉AiR（シングル14×97×195cm）",link:"",price:61560),
+                Item(title:"〈西川寝具〉AiR（ハード14×97×195cm）",link:"",price:61560),
+                Item(title:"〈トゥルースリーパー〉セブンスピロー",link:"",price:15984),
+                Item(title:"〈イタリア・ファべ社〉メディカル枕",link:"",price:10584),
+                Item(title:"〈めぐリズム〉蒸気でホッとアイマスク　カモミールジンジャー（14枚入り）",link:"",price:369),
+                Item(title:"〈ワコール〉パジャマ　睡眠科学（ピンク）",link:"",price:14040),
+                Item(title:"〈ワコール〉パジャマ　睡眠科学（アイボリー）",link:"",price:14040),
+                Item(title:"〈ワコール〉パジャマ　睡眠科学（ネイビー）",link:"",price:14040),
+                Item(title:"〈デイリーディライト〉ブレンドエッセンシャルオイル　夜用リラック（10ml）",link:"",price:1296),
+                Item(title:"〈日本香堂〉anmingピローミスト（100ml）",link:"",price:786)
             ]
         }else if(sendText == "SegueStomach"){
         items = [
-            Item(title:"〈FAUCHON〉ブルーベリージャム",link:"",price:2052),
-            Item(title:"〈日本サーナ〉ビルベリーとカシスの濃縮果汁セット",link:"",price:4140),
-            Item(title:"発酵カシス2本セット",link:"",price:4140),
-            Item(title:"〈Oaks Heart〉飲むブルーベリーの酢",link:"",price:1620),
-            //・・・・(続けてここに書いていく)・・・・
+            Item(title:"〈網走産〉砂出ししじみ",link:"",price:4514),
+            Item(title:"〈宍道湖産〉大粒大和しじみ",link:"",price:3780),
+            Item(title:"〈米子中浦〉宍道湖しじみ（大粒）個食詰合せ",link:"",price:3240),
+            Item(title:"無農薬ぶなしめじ（100g）",link:"",price:340),
+            Item(title:"〈新潟産〉舞茸（約700g）",link:"",price:1980),
+            Item(title:"無農薬無化学肥料　えのき茸",link:"",price:340),
+            Item(title:"〈CHESCO〉チーズギフト（イルドフランス　カマンベール・ジェラールクリーミィウォッシュ・グラナ　パダーノ・ナッツ＆フルーツ・レッドチェダー　ニュージーランド　５種）",link:"",price:4320),
+            Item(title:"〈ハウスウェルネスフーズ〉ウコンの力　レバープラス粒タイプ箱（10個）",link:"",price:1327),
+            Item(title:"〈DHC〉濃縮ウコン（30日分）",link:"",price:788),
+            Item(title:"〈カゴメ〉スルフォラファン（93粒）",link:"",price:4100)
         ]
         }else if(sendText == "SegueLeg"){
             items = [
-                Item(title:"〈FAUCHON〉llllllllll",link:"",price:2052),
-                Item(title:"〈日本サーナ〉ビルベリーとカシスの濃縮果汁セット",link:"",price:4140),
-                Item(title:"発酵カシス2本セット",link:"",price:4140),
-                Item(title:"〈Oaks Heart〉飲むブルーベリーの酢",link:"",price:1620),
-                //・・・・(続けてここに書いていく)・・・・
+                Item(title:"〈大正製薬〉大正グルコサミンパワープラス（30日分）",link:"",price:5400),
+                Item(title:"〈ワコール〉CW-Xパーツ（サポーター）",link:"",price:1940),
+                Item(title:"〈ミズノ〉バレーボール膝サポーター",link:"",price:1188),
+                Item(title:"〈洛中高岡屋〉おじゃみ座布団",link:"",price:5400),
+                Item(title:"高級金らん正座椅子",link:"",price:3240)
             ]
         }
 
