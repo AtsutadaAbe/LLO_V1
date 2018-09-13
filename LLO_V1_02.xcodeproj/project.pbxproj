@@ -18,6 +18,9 @@
 		D80A25732109FCF80082A9C0 /* body_blank_figure_front.png in Resources */ = {isa = PBXBuildFile; fileRef = D80A2562210956540082A9C0 /* body_blank_figure_front.png */; };
 		D817A094211BD51100DF0BF9 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817A093211BD51100DF0BF9 /* AgreementViewController.swift */; };
 		D824B76D213CB75A00CC0A54 /* job_care_manager_man.png in Resources */ = {isa = PBXBuildFile; fileRef = D824B76C213CB75A00CC0A54 /* job_care_manager_man.png */; };
+		D849DF49213F4A5D001C603E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D849DF48213F4A5D001C603E /* AVFoundation.framework */; };
+		D849DF4B213F4E6C001C603E /* decision4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D849DF4A213F4E6C001C603E /* decision4.mp3 */; };
+		D849DF4D213F50B4001C603E /* cancel1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D849DF4C213F50B4001C603E /* cancel1.mp3 */; };
 		D861F87221074E890007F507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F87121074E890007F507 /* AppDelegate.swift */; };
 		D861F87421074E890007F507 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F87321074E890007F507 /* ViewController.swift */; };
 		D861F87721074E890007F507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D861F87521074E890007F507 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		D80A25722109565A0082A9C0 /* body_icon07_daichou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_icon07_daichou.png; sourceTree = "<group>"; };
 		D817A093211BD51100DF0BF9 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		D824B76C213CB75A00CC0A54 /* job_care_manager_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = job_care_manager_man.png; path = ../../../../Downloads/job_care_manager_man.png; sourceTree = "<group>"; };
+		D849DF48213F4A5D001C603E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D849DF4A213F4E6C001C603E /* decision4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = decision4.mp3; path = ../../../../Downloads/decision4.mp3; sourceTree = "<group>"; };
+		D849DF4C213F50B4001C603E /* cancel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cancel1.mp3; path = ../../../../Downloads/cancel1.mp3; sourceTree = "<group>"; };
 		D861F86E21074E890007F507 /* LLO_V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLO_V1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D861F87121074E890007F507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D861F87321074E890007F507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D849DF49213F4A5D001C603E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +106,18 @@
 				D80A2564210956550082A9C0 /* tsume_foot.png */,
 				D80A256F210956590082A9C0 /* tsume_hand.png */,
 				D824B76C213CB75A00CC0A54 /* job_care_manager_man.png */,
+				D849DF4A213F4E6C001C603E /* decision4.mp3 */,
+				D849DF4C213F50B4001C603E /* cancel1.mp3 */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		D849DF47213F4A5D001C603E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D849DF48213F4A5D001C603E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D861F86521074E890007F507 = {
@@ -108,6 +125,7 @@
 			children = (
 				D861F87021074E890007F507 /* LLO_V1 */,
 				D861F86F21074E890007F507 /* Products */,
+				D849DF47213F4A5D001C603E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,7 +223,9 @@
 				D80118AF2134F0BF00214A27 /* body_icon04_i.png in Resources */,
 				D80A25732109FCF80082A9C0 /* body_blank_figure_front.png in Resources */,
 				D861F87C21074E8A0007F507 /* LaunchScreen.storyboard in Resources */,
+				D849DF4B213F4E6C001C603E /* decision4.mp3 in Resources */,
 				D861F87921074E8A0007F507 /* Assets.xcassets in Resources */,
+				D849DF4D213F50B4001C603E /* cancel1.mp3 in Resources */,
 				D824B76D213CB75A00CC0A54 /* job_care_manager_man.png in Resources */,
 				D861F87721074E890007F507 /* Main.storyboard in Resources */,
 				D80118B12134F11700214A27 /* body_icon01_nou.png in Resources */,

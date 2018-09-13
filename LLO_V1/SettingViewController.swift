@@ -7,6 +7,8 @@
 //
 
 import UIKit
+
+import AVFoundation
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // 設定データ保持オブジェクト
