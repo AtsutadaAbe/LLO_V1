@@ -21,6 +21,7 @@
 		D849DF49213F4A5D001C603E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D849DF48213F4A5D001C603E /* AVFoundation.framework */; };
 		D849DF4B213F4E6C001C603E /* decision4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D849DF4A213F4E6C001C603E /* decision4.mp3 */; };
 		D849DF4D213F50B4001C603E /* cancel1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D849DF4C213F50B4001C603E /* cancel1.mp3 */; };
+		D8506D6A2149F13A00131C13 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8506D692149F13A00131C13 /* WebKit.framework */; };
 		D861F87221074E890007F507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F87121074E890007F507 /* AppDelegate.swift */; };
 		D861F87421074E890007F507 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D861F87321074E890007F507 /* ViewController.swift */; };
 		D861F87721074E890007F507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D861F87521074E890007F507 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		D849DF48213F4A5D001C603E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D849DF4A213F4E6C001C603E /* decision4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = decision4.mp3; path = ../../../../Downloads/decision4.mp3; sourceTree = "<group>"; };
 		D849DF4C213F50B4001C603E /* cancel1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cancel1.mp3; path = ../../../../Downloads/cancel1.mp3; sourceTree = "<group>"; };
+		D8506D692149F13A00131C13 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D861F86E21074E890007F507 /* LLO_V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLO_V1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D861F87121074E890007F507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D861F87321074E890007F507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8506D6A2149F13A00131C13 /* WebKit.framework in Frameworks */,
 				D849DF49213F4A5D001C603E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 		D849DF47213F4A5D001C603E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8506D692149F13A00131C13 /* WebKit.framework */,
 				D849DF48213F4A5D001C603E /* AVFoundation.framework */,
 			);
 			name = Frameworks;

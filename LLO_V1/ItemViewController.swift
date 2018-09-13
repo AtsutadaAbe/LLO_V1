@@ -8,28 +8,41 @@
 
 import UIKit
 import Foundation
+import WebKit
 
 class ItemViewController: UIViewController {
     var itemName:String!
     var itemPrice:Int!
+    var link:String!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         label.numberOfLines = 0;
        
-//        //数字の３桁カンマ
-//        var formatter = NumberFormatter()
-//        formatter.numberStyle = .currency
-//        formatter.groupingSeparator = ","
-//        formatter.groupingSize = 3
+        //数字の3桁カンマ
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.groupingSeparator = ","
+        formatter.groupingSize = 3
+        formatter.maximumFractionDigits = 0
+        // 小数点なし
+        formatter.roundingMode = .floor// 小数点切り捨て
+        //商品価格
+        labelPrice.text = formatter.string(from: NSNumber(value:itemPrice))! + "円(税込)"
         
         //商品名
         label.text = itemName
-        //商品価格
-        //labelPrice.text = formatter.stringFromNumber(Number(itemPrice)) + "円（税込）"
-        labelPrice.text = itemPrice.description + "円（税込）"
+        
+        // Web表示
+        if let url = URL(string: link) {
+            let req = URLRequest(url:url)
+            self.webView.load(req) }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

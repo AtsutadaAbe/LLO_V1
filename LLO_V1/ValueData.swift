@@ -12,6 +12,9 @@ class ValueData {
     // 設定値
     var inputVal:Int = 0
     
+    // スライダーの値
+    var inputSliderVal:Float = 0.0
+    
     var inputText:String = ""
     
 }

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
+class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var sex: UISegmentedControl!
     @IBOutlet weak var pickerAge: UIPickerView!
     @IBOutlet weak var pickerHeight: UIPickerView!
     @IBOutlet weak var pickerWeight: UIPickerView!
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
     @IBAction func next(_ sender: UIButton) {
         //年齢
         let age = 10 * pickerAge.selectedRow(inComponent: 0) + pickerAge.selectedRow(inComponent: 1)
@@ -51,6 +53,10 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textFieldName.delegate = self
+        textFieldEmail.delegate = self
+        
         // Pickerの準備
         pickerAge.tag = 1
         pickerAge.delegate = self
@@ -110,7 +116,12 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
     
     // pickerに表示する値の数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return texts.count
+        var num = texts.count
+        if (pickerView.tag != 1 && component == 0){
+            //身長、体重の時、百の位は0、1、2のみとする
+            num = 3
+        }
+        return num
     }
     
     //pickerに表示する値を返すデリゲートメソッド
@@ -122,6 +133,11 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //label.text = texts[row]
         print(component.description + ":" + texts[row])
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textFieldName.resignFirstResponder()
+        textFieldEmail.resignFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {

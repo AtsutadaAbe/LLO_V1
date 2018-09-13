@@ -9,6 +9,14 @@
 import UIKit
 
 class AgreementViewController: UIViewController {
+    @IBAction func agree(_ sender: UIButton) {
+        if (SettingViewController.datas["agree"] == nil) {
+            //まだ同意していない
+            let agreeData = ValueData()
+            agreeData.inputVal = 1
+            SettingViewController.datas["agree"] = agreeData
+        }
+    }
     @IBAction func notAgree(_ sender: UIButton) {
         self.navigationController!.popToRootViewController(animated: true)
     }

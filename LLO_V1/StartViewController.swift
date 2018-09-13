@@ -11,6 +11,19 @@ import UIKit
 class StartViewController: UIViewController {
     
     @IBOutlet weak var comment: UITextView!
+    @IBAction func jumpPersonalInfo(_ sender: UIButton) {
+        if (SettingViewController.datas["agree"] != nil){
+            //すでに同意しているときはコードで個人情報設定画面へナビゲーション
+            let nextView = self.storyboard?.instantiateViewController(
+            withIdentifier: "PersonalInfoView") as! PersonalInfoViewController
+            self.navigationController?.pushViewController(nextView, animated: true)
+        } else {
+            //まだ同意していないときはコードで同意画面へナビゲーション
+            let nextView = self.storyboard?.instantiateViewController(
+            withIdentifier: "AgreementView") as! AgreementViewController
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

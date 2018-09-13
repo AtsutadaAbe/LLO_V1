@@ -38,7 +38,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
         //商品一覧データを作る
         if(sendText == "SegueHead"){
             items = [
-                Item(title:"〈味の素〉グリナ（30本入り）",link:"",price:7128),
+                Item(title:"〈味の素〉グリナ（30本入り）",link:"https://askul.c.yimg.jp/img/product/3L1/3435370_3L1.jpg",price:7128),
                 Item(title:"〈日本ガーリック株式会社〉グリシン200g（200g）",link:"",price:1680),
                 Item(title:"〈カレルチャペック紅茶〉ハーブティー（２缶セット）",link:"",price:2700),
                 Item(title:"〈西川寝具〉AiR（シングル14×97×195cm）",link:"",price:61560),
@@ -136,6 +136,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
             controller.title = item.title
             controller.itemName = item.title
             controller.itemPrice = item.price
+            controller.link = item.link
+
             
         }
     }

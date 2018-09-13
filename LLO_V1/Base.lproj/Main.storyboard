@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long Life Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4B-N6-2Lz">
-                                <rect key="frame" x="52" y="167" width="270" height="49"/>
+                                <rect key="frame" x="52" y="167" width="264" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="個人設定画面"/>
                                 <connections>
-                                    <segue destination="Eeb-4E-X43" kind="show" id="z3k-gH-duE"/>
+                                    <action selector="jumpPersonalInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTS-Cc-tqk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqV-I9-gVo">
@@ -68,7 +68,7 @@
         <!--Agreement View Controller-->
         <scene sceneID="1Vl-NT-iKR">
             <objects>
-                <viewController id="Eeb-4E-X43" customClass="AgreementViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AgreementView" id="Eeb-4E-X43" customClass="AgreementViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1GM-dq-SyY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +85,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="同意する"/>
                                 <connections>
+                                    <action selector="agree:" destination="Eeb-4E-X43" eventType="touchUpInside" id="SZx-tA-lZm"/>
                                     <segue destination="ljD-q5-faB" kind="show" id="NfV-0Q-ebr"/>
                                 </connections>
                             </button>
@@ -139,7 +140,7 @@ Mail:info@example.co.jp
         <!--Personal Info View Controller-->
         <scene sceneID="tSp-mg-Kec">
             <objects>
-                <viewController id="ljD-q5-faB" customClass="PersonalInfoViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalInfoView" id="ljD-q5-faB" customClass="PersonalInfoViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ihh-NZ-279">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,6 +241,8 @@ Mail:info@example.co.jp
                         <outlet property="pickerHeight" destination="9bj-I6-OCf" id="CSR-CV-EHD"/>
                         <outlet property="pickerWeight" destination="BcF-5c-0uR" id="QBC-72-FRJ"/>
                         <outlet property="sex" destination="goa-mH-0Wh" id="lQa-kU-q0K"/>
+                        <outlet property="textFieldEmail" destination="MQL-zY-K82" id="nKw-53-Drf"/>
+                        <outlet property="textFieldName" destination="Nuc-nz-m8o" id="Fea-49-Xf4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrC-n2-7Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,6 +527,15 @@ Mail:info@example.co.jp
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-5f-63K">
+                                <rect key="frame" x="0.0" y="316" width="375" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IEy-nV-3H6"/>
@@ -531,6 +543,7 @@ Mail:info@example.co.jp
                     <connections>
                         <outlet property="label" destination="HAj-Zs-8k8" id="Ffl-H6-jq3"/>
                         <outlet property="labelPrice" destination="iIR-AT-zNp" id="GWi-sh-ZJP"/>
+                        <outlet property="webView" destination="MTe-5f-63K" id="OHw-fO-13G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ln-fV-tNU" userLabel="First Responder" sceneMemberID="firstResponder"/>

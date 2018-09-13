@@ -24,8 +24,8 @@ class InputValueViewController: UIViewController {
     }
     @IBAction func inputSlider(_ sender: UISlider) {
         //スライダーの値を設定データオブジェクトに保持
-        let value:Int = Int(sender.value)
-        data.inputVal = value
+        let value = sender.value
+        data.inputSliderVal = value
         val.text = value.description
     }
     
@@ -302,21 +302,21 @@ class InputValueViewController: UIViewController {
         else if(itemName == "クレアチニン（男性）"){
             self.radio.isHidden = true
             //スライダーの最大と最小・設定値を復元
-            self.slider.maximumValue = 2
-            self.slider.minimumValue = 0
-            self.slider.value = Float(data.inputVal)
-            //スライダー値のラベル表示
-            val.text = data.inputVal.description
+            self.slider.maximumValue = 1.5
+            self.slider.minimumValue = 0.0
+            self.slider.value = data.inputSliderVal
+            //スライダー値のラベル表示
+            val.text = data.inputSliderVal.description
             self.explain.text = "クレアチニンは尿酸や尿素窒素と同様に老廃物の一つで、腎臓が正常に働いていれば、尿として体外に排出されます。\n血液中のクレアチニンが多いということは、腎機能が障害されているということになります。\n\n異常があった場合日常生活では、塩分やタンパク質の摂取を制限する食事、適度な運動を心がけるとともに、肥満、高血圧、脱水などの憎悪因子を避けるようにしましょう。"
         }
         else if(itemName == "クレアチニン（女性）"){
             self.radio.isHidden = true
             //スライダーの最大と最小・設定値を復元
-            self.slider.maximumValue = 2
-            self.slider.minimumValue = 0
-            self.slider.value = Float(data.inputVal)
-            //スライダー値のラベル表示
-            val.text = data.inputVal.description
+            self.slider.maximumValue = 1.5
+            self.slider.minimumValue = 0.0
+            self.slider.value = data.inputSliderVal
+            //スライダー値のラベル表示
+            val.text = data.inputSliderVal.description
             self.explain.text = "クレアチニンは尿酸や尿素窒素と同様に老廃物の一つで、腎臓が正常に働いていれば、尿として体外に排出されます。\n血液中のクレアチニンが多いということは、腎機能が障害されているということになります。\n\n異常があった場合日常生活では、塩分やタンパク質の摂取を制限する食事、適度な運動を心がけるとともに、肥満、高血圧、脱水などの憎悪因子を避けるようにしましょう。"
         }
         else if(itemName == "eGFR"){
@@ -343,11 +343,11 @@ class InputValueViewController: UIViewController {
         else if(itemName == "HbA1c"){
             self.radio.isHidden = true
             //スライダーの最大と最小・設定値を復元
-            self.slider.maximumValue = 8
-            self.slider.minimumValue = 3
-            self.slider.value = Float(data.inputVal)
-            //スライダー値のラベル表示
-            val.text = data.inputVal.description
+            self.slider.maximumValue = 8.0
+            self.slider.minimumValue = 3.0
+            self.slider.value = data.inputSliderVal
+            //スライダー値のラベル表示
+            val.text = data.inputSliderVal.description
             self.explain.text = "HbA1cは糖化ヘモグロビンともいい、赤血球の中で体内に酸素を運ぶ役割のヘモグロビンと血液中のブドウ糖が結合したものです。\n血糖値や尿糖値が、検査前の食事や飲酒、検査時間によって変動するのに対し、HbA1cはそれらにほとんど影響を受けない特徴があるため、HbA1cの値を調べれば過去１〜２ヶ月の血糖の平均的な状況を知る事ができます。"
         }
             
