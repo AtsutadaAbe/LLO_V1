@@ -24,9 +24,17 @@ class InputValueViewController: UIViewController {
     }
     @IBAction func inputSlider(_ sender: UISlider) {
         //スライダーの値を設定データオブジェクトに保持
-        let value = sender.value
-        data.inputSliderVal = value
-        val.text = value.description
+        if(itemName == "クレアチニン（男性）"
+        || itemName == "クレアチニン（女性）"
+        || itemName == "HbA1c") {
+            let value = sender.value
+            data.inputSliderVal = value
+            val.text = value.description
+        } else {
+            let value = Int(sender.value)
+            data.inputVal = value
+            val.text = value.description
+        }
     }
     
     

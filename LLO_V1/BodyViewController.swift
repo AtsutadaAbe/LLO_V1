@@ -13,6 +13,36 @@ class BodyViewController: UIViewController {
     @IBOutlet weak var buttonHead: UIButton!
     @IBOutlet weak var buttonStomach: UIButton!
     @IBOutlet weak var buttonLeg: UIButton!
+    @IBAction func buttonHead(_ sender: UIButton) {
+        if (buttonHead.backgroundColor == UIColor.red) {
+            //商品一覧へ画面へナビゲーション
+            let nextView = self.storyboard?.instantiateViewController(
+                withIdentifier: "ItemListView") as! ItemListViewController
+            // 遷移先のViewControllerに対してsegueの名称を渡す
+            nextView.sendText = "SegueHead"
+            self.navigationController?.pushViewController(nextView,animated: true)
+        }
+    }
+    @IBAction func buttonStomach(_ sender: UIButton) {
+        if (buttonStomach.backgroundColor == UIColor.red) {
+            //商品一覧へ画面へナビゲーション
+            let nextView = self.storyboard?.instantiateViewController(
+                withIdentifier: "ItemListView") as! ItemListViewController
+            // 遷移先のViewControllerに対してsegueの名称を渡す
+            nextView.sendText = "SegueStomach"
+            self.navigationController?.pushViewController(nextView,animated: true)
+        }
+    }
+    @IBAction func buttonLeg(_ sender: UIButton) {
+        if (buttonLeg.backgroundColor == UIColor.red) {
+            //商品一覧へ画面へナビゲーション
+            let nextView = self.storyboard?.instantiateViewController(
+                withIdentifier: "ItemListView") as! ItemListViewController
+            // 遷移先のViewControllerに対してsegueの名称を渡す
+            nextView.sendText = "SegueLeg"
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -69,13 +99,6 @@ class BodyViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("画面遷移先：" + segue.destination.description)
-        let secondViewController:ItemListViewController = segue.destination as! ItemListViewController
-        // 遷移先のViewControllerに対してsegueの名称を渡す
-        secondViewController.sendText = segue.identifier!.description
-        
     }
     
 }

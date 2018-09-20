@@ -24,7 +24,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     // セクション内の項目
     let items1 = ["HDLコレステロール","LDLコレステロール","中性脂肪"]
     let items2 = ["AST","ALT","γ-GT（γ-GTP）","お酒を飲む回数"]
-    let items3 = ["クレアチニン（男性）","クレアチニン（女性）","eGFR","蛋白"]
+    var items3 = ["クレアチニン（男性）","クレアチニン（女性）","eGFR","蛋白"]
     let items4 = ["空腹時血糖","HbA1c","お酒を飲む回数","脂っぽいものが好き"]
     let items5 = ["近くのものを見る時、ピントがあいにくい","パソコンや新聞などで目を酷使している","小さな文字をストレスに感じるようになった","目の使い過ぎで肩・首筋が凝っている"]
     let items6 = ["毎日スッキリ目覚められる","睡眠時間が十分にとれている","日中集中して物事に取り組める"]
@@ -33,6 +33,17 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //items3の内容を性別に応じて変更
+        if (SettingViewController.datas["sex"] != nil) {
+            if (SettingViewController.datas["sex"]!.inputVal == 0) {
+                //男の時は女性外す
+                items3.remove(at: (items3.index(of: "クレアチニン（女性）")!))
+            } else {
+                //女の時は男性外す
+                items3.remove(at: (items3.index(of: "クレアチニン（男性）")!))
+            }
+        }
+    
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

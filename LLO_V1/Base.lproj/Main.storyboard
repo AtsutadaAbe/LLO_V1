@@ -392,7 +392,7 @@ Mail:info@example.co.jp
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueStomach" id="D87-pl-b7K"/>
+                                    <action selector="buttonStomach:" destination="0Kg-J2-qHM" eventType="touchUpInside" id="jQB-Cl-nKX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEv-GQ-gR7">
@@ -409,7 +409,7 @@ Mail:info@example.co.jp
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueHead" id="HIR-qt-gK4"/>
+                                    <action selector="buttonHead:" destination="0Kg-J2-qHM" eventType="touchUpInside" id="rMe-fk-f5u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-U8-EOZ">
@@ -426,7 +426,7 @@ Mail:info@example.co.jp
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="q3H-oD-1Zs" kind="show" identifier="SegueLeg" id="It0-Zz-XTC"/>
+                                    <action selector="buttonLeg:" destination="0Kg-J2-qHM" eventType="touchUpInside" id="Fzs-fX-888"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -461,7 +461,7 @@ Mail:info@example.co.jp
         <!--Item List View Controller-->
         <scene sceneID="XMv-Ea-OT0">
             <objects>
-                <viewController id="q3H-oD-1Zs" customClass="ItemListViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemListView" id="q3H-oD-1Zs" customClass="ItemListViewController" customModule="LLO_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXb-aq-0kP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -573,7 +573,4 @@ Mail:info@example.co.jp
         <image name="body_blank_figure_front.png" width="220" height="400"/>
         <image name="job_care_manager_man.png" width="400" height="381"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HIR-qt-gK4"/>
-    </inferredMetricsTieBreakers>
 </document>
