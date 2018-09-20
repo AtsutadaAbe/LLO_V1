@@ -9,7 +9,9 @@
 import UIKit
 
 import AVFoundation
-class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,AVAudioPlayerDelegate {
+    
+    var audioPlayer:AVAudioPlayer!
     
     // 設定データ保持オブジェクト
     static var datas: Dictionary<String, ValueData> = [:]
@@ -17,6 +19,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func save(_ sender: UIBarButtonItem) {
         //更新ボタンが押された時
         self.navigationController!.popToRootViewController(animated: true)
+        
+        if(audioPlayer.isPlaying){
+            audioPlayer.stop()
+        }else{
+            audioPlayer.play()
+        }
     }
     @IBOutlet weak var tableView: UITableView!
     // セクション
@@ -44,6 +52,26 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     
+        //再生するaudioファイルのパスを作成
+        let audioPath = Bundle.main.path(forResource:"decision4",ofType:"mp3")!
+        let audioUrl = URL(fileURLWithPath:audioPath)
+        
+        //audioを再生するプレイヤーを再生する
+        var audioError:NSError?
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf:audioUrl)
+        }catch let error as NSError{
+            audioError = error
+            audioPlayer = nil
+        }
+        
+        //エラーが起きた時
+        if let error = audioError{
+            print("Error\(error.localizedDescription)")
+        }
+        audioPlayer.delegate = self
+        audioPlayer.prepareToPlay()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
