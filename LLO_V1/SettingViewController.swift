@@ -317,12 +317,14 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     static func postSetting(_ name:String,_ val:ValueData) {
         let idfv = UIDevice.current.identifierForVendor?.uuidString
         
-        let url = URL(string: "https://lloapp.herokuapp.com/setting?uid="
+        var text = "https://lloapp.herokuapp.com/setting?uid="
             + idfv!.description
             + "&name=" + name
             + "&val=" + val.inputVal.description
             + "&fval=" + val.inputSliderVal.description
-            + "&text=" + (val.inputText=="" ? "-" : val.inputText) + "")
+            + "&text=" + (val.inputText=="" ? "-" : val.inputText) + ""
+        text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        let url = URL(string: text)
         
         let request = URLRequest(url: url!)
         let session = URLSession.shared

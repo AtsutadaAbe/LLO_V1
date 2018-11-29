@@ -12,7 +12,7 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var comment: UITextView!
     @IBAction func jumpPersonalInfo(_ sender: UIButton) {
-        if (SettingViewController.datas["agree"] != nil){
+        if (SettingViewController.datas["agree"] != nil && SettingViewController.datas["agree"]?.inputVal == 1){
             //すでに同意しているときはコードで個人情報設定画面へナビゲーション
             let nextView = self.storyboard?.instantiateViewController(
             withIdentifier: "PersonalInfoView") as! PersonalInfoViewController

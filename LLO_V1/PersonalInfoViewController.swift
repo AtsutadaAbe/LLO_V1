@@ -43,6 +43,14 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
         nameData.inputText = name.text!
         SettingViewController.datas["name"] = nameData
         SettingViewController.postSetting("name", nameData)
+        if name.text == nil || name.text! == "" {
+            // 同意を外す
+            let agreeData = ValueData()
+            agreeData.inputVal = 0
+            SettingViewController.datas["agree"] = agreeData
+            SettingViewController.postSetting("agree", agreeData)
+            
+        }
         //メルアド
         let mailData = ValueData()
         mailData.inputText = mail.text!

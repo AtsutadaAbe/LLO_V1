@@ -10,7 +10,7 @@ import UIKit
 
 class AgreementViewController: UIViewController {
     @IBAction func agree(_ sender: UIButton) {
-        if (SettingViewController.datas["agree"] == nil) {
+        if (SettingViewController.datas["agree"] == nil || SettingViewController.datas["agree"]?.inputVal == 0) {
             //まだ同意していない
             let agreeData = ValueData()
             agreeData.inputVal = 1
