@@ -23,29 +23,36 @@ class PersonalInfoViewController: UIViewController , UIPickerViewDelegate, UIPic
         let data = ValueData()
         data.inputVal = age
         SettingViewController.datas["age"] = data
+        SettingViewController.postSetting("age", data)
+
         //身長
         let height = 100 * pickerHeight.selectedRow(inComponent: 0) + 10 * pickerHeight.selectedRow(inComponent: 1) + pickerHeight.selectedRow(inComponent: 2)
         let dataHeight = ValueData()
         dataHeight.inputVal = height
         SettingViewController.datas["height"] = dataHeight
+        SettingViewController.postSetting("height", dataHeight)
         //体重
         let weight = 100 * pickerWeight.selectedRow(inComponent: 0) + 10 * pickerWeight.selectedRow(inComponent: 1) + pickerWeight.selectedRow(inComponent: 2)
         let dataWeight = ValueData()
         dataWeight.inputVal = weight
         SettingViewController.datas["weight"] = dataWeight
+        SettingViewController.postSetting("weight", dataWeight)
         
         //氏名
         let nameData = ValueData()
         nameData.inputText = name.text!
         SettingViewController.datas["name"] = nameData
+        SettingViewController.postSetting("name", nameData)
         //メルアド
         let mailData = ValueData()
         mailData.inputText = mail.text!
         SettingViewController.datas["mail"] = mailData
+        SettingViewController.postSetting("mail", mailData)
         //性別
         let sexData = ValueData()
         sexData.inputVal = sex.selectedSegmentIndex
         SettingViewController.datas["sex"] = sexData
+        SettingViewController.postSetting("sex", sexData)
 
     }
     

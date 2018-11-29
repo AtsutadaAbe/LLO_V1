@@ -313,5 +313,59 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
     }
+    // サーバに設定値を保存する
+    static func postSetting(_ name:String,_ val:ValueData) {
+        let idfv = UIDevice.current.identifierForVendor?.uuidString
+        
+        let url = URL(string: "https://lloapp.herokuapp.com/setting?uid="
+            + idfv!.description
+            + "&name=" + name
+            + "&val=" + val.inputVal.description
+            + "&fval=" + val.inputSliderVal.description
+            + "&text=" + (val.inputText=="" ? "-" : val.inputText) + "")
+        
+        let request = URLRequest(url: url!)
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if error == nil, let data = data, let response = response as? HTTPURLResponse {
+                // HTTPヘッダの取得
+                print("Content-Type: \(response.allHeaderFields["Content-Type"] ?? "")")
+                // HTTPステータスコード
+                print("statusCode: \(response.statusCode)")
+                print(String(data: data, encoding: String.Encoding.utf8) ?? "")
+            }
+            }.resume()
+        
+    }
+    // 設定値をサーバから取得
+    static func getSetting() {
+        let idfv = UIDevice.current.identifierForVendor?.uuidString
+        let url = URL(string: "https://lloapp.herokuapp.com/setting/"
+            + idfv!.description)!
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let decoder: JSONDecoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        var settingList: [SettingData]!
+        do {
+            let data = try Data(contentsOf: url, options: [])
+            settingList = try decoder.decode([SettingData].self, from: data)
+            //print(settingList)
+        } catch {
+            print(error)
+        }
+        if (settingList != nil) {
+            for s in settingList! {
+                print(s)
+                let data = ValueData()
+                data.inputVal = s.val
+                data.inputSliderVal = s.fval
+                data.inputText = s.text
+                datas[s.name] = data
+            }
+        }
+    }
+
 }
 

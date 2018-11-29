@@ -21,6 +21,7 @@ class InputValueViewController: UIViewController {
     @IBAction func inputRadio(_ sender: UISegmentedControl) {
         //選択肢の値を設定データオブジェクトに保持
         data.inputVal = sender.selectedSegmentIndex
+        SettingViewController.postSetting(itemName, data)
     }
     @IBAction func inputSlider(_ sender: UISlider) {
         //スライダーの値を設定データオブジェクトに保持
@@ -35,6 +36,8 @@ class InputValueViewController: UIViewController {
             data.inputVal = value
             val.text = value.description
         }
+        print("\(data.inputVal) \(data.inputSliderVal) \(data.inputText) \(itemName)")
+        SettingViewController.postSetting(itemName, data)
     }
     
     

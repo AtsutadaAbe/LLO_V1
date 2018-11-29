@@ -29,6 +29,9 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        SettingViewController.getSetting()
+
+        
      let comment = arc4random_uniform(10)
         if(comment == 0){
             self.comment.text = "今日も来てくれて、ありがとうございます。\nさて、今日は運動に関する豆知識。\n男性なら5回、女性なら3回ラジオ体操をするだけで一日に必要な最低運動量を満たすことができます。\n最近体重が気になりだした方、ダイエットをしている方、運動が嫌いな方はラジオ体操をやってみるといいかも?"

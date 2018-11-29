@@ -15,6 +15,8 @@ class AgreementViewController: UIViewController {
             let agreeData = ValueData()
             agreeData.inputVal = 1
             SettingViewController.datas["agree"] = agreeData
+            SettingViewController.postSetting("agree", agreeData)
+
         }
     }
     @IBAction func notAgree(_ sender: UIButton) {
