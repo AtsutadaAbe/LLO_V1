@@ -15,9 +15,9 @@ class Item {
     var link = ""
     //価格
     var price = 0
-    
+    //説明
     var description = ""
-    
+    //メーカー
     var maker = ""
     
     init(title:String, link:String, price:Int, maker:String, description:String) {
