@@ -14,9 +14,13 @@ class ItemViewController: UIViewController {
     var itemName:String!
     var itemPrice:Int!
     var link:String!
+    var desc:String!
+    var maker:String!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var labelMaker: UILabel!
+    @IBOutlet weak var textDesc: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,9 @@ class ItemViewController: UIViewController {
         
         //商品名
         label.text = itemName
+        
+        labelMaker.text = maker
+        textDesc.text = desc
         
         // Web表示
         if let url = URL(string: link) {

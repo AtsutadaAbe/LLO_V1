@@ -15,10 +15,18 @@ class Item {
     var link = ""
     //価格
     var price = 0
-    init(title:String, link:String, price:Int) {
+    
+    var description = ""
+    
+    var maker = ""
+    
+    init(title:String, link:String, price:Int, maker:String, description:String) {
         self.title = title
         self.link = link
         self.price = price
+        self.maker = maker
+        self.description = description
+    
     }
 }
 

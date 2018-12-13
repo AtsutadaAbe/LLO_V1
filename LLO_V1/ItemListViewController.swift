@@ -55,7 +55,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
             items = []
             for item in itemList {
                 if item.body == "head"{
-                    let i = Item(title:item.item_name,link:item.url,price:item.price)
+                    let i = Item(title:item.item_name,link:item.url,price:item.price,maker:item.maker_name, description:item.description)
                     items.insert(i, at: 0)
                 }
             }
@@ -63,7 +63,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
             items = []
             for item in itemList {
                 if item.body == "stomach"{
-                    let i = Item(title:item.item_name,link:item.url,price:item.price)
+                    let i = Item(title:item.item_name,link:item.url,price:item.price,maker:item.maker_name, description:item.description)
                     items.insert(i, at: 0)
                 }
             }
@@ -71,7 +71,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
             items = []
             for item in itemList {
                 if item.body == "leg"{
-                    let i = Item(title:item.item_name,link:item.url,price:item.price)
+                    let i = Item(title:item.item_name,link:item.url,price:item.price,maker:item.maker_name, description:item.description)
                     items.insert(i, at: 0)
                 }
             }
@@ -139,7 +139,8 @@ class ItemListViewController: UIViewController, UITableViewDelegate,UITableViewD
             controller.itemName = item.title
             controller.itemPrice = item.price
             controller.link = item.link
-
+            controller.desc = item.description
+            controller.maker = item.maker
             
         }
     }
