@@ -42,7 +42,9 @@ class ItemViewController: UIViewController {
         label.text = itemName
         
         labelMaker.text = maker
-        textDesc.text = desc
+        
+        textDesc.text = desc.replacingOccurrences(of:"\\n", with:"\n")
+        
         
         // Web表示
         if let url = URL(string: link) {
